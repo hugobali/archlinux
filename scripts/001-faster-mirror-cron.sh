@@ -17,23 +17,13 @@ sudo reflector --latest 100 --fastest 50 --age 24 --sort rate --threads 5 --verb
 && sudo rankmirrors -n 0 /tmp/mirrorlist.new > /tmp/mirrorlist && sudo cp /tmp/mirrorlist /etc/pacman.d
 
 echo "################################################################"
-echo "####   	Copy cron to daily folder					       ###"
+echo "####   	Copy cron to daily folder                          ###"
 echo "################################################################"
 
 sudo cp files/mirrorlist /etc/cron.daily
 
 echo "################################################################"
-echo "####      List fastest server saved                         ###"
+echo "####      List fastest server saved                          ###"
 echo "################################################################"
 
 cat /etc/pacman.d/mirrorlist
-
-echo "################################################################"
-echo "####             Updating to the latest versions            ####"
-echo "################################################################"
-
-sudo pacman -Syyu --noconfirm
-
-echo "################################################################"
-echo "####             Your system is now up to date              ####"
-echo "################################################################"

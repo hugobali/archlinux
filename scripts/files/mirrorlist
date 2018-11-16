@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Update reflector and delete .pacnew file.
+sudo reflector --latest 100 --fastest 50 --age 24 --sort rate --threads 5 --verbose --save /tmp/mirrorlist.new \
+&& sudo rankmirrors -n 0 /tmp/mirrorlist.new > /tmp/mirrorlist && sudo cp /tmp/mirrorlist /etc/pacman.d \
+&& rm -f /etc/pacman.d/mirrorlist.pacnew

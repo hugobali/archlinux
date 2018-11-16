@@ -112,7 +112,7 @@ lsblk
 ```bash
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
-rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+rankmirrors -n 20 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 ```
 
 #### Install Base system
@@ -239,7 +239,7 @@ reboot
 
 #### Create user, install and configure SUDO
 
-```
+```bash
 useradd -m -g users -G wheel -s /bin/bash USER
 ```
 
@@ -256,29 +256,31 @@ Run `visudo` to edit `/etc/sudoers` file
 
 #### Enable options in `/etc/pacman.conf`
 
-```
+```bash
 sed -i 's/#Color/Color/g' /etc/pacman.conf
 ```
 
 Enable multilib repository
-```
+
+```bash
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 ```
 
 Enable yaourt repository
-```
+
+```bash
 echo "" >> /etc/pacman.conf
 echo "## Enable Repository for yaourt" >> /etc/pacman.conf
-echo "[archlinuxfr]" >> /etc/pacman.conf
+echo "[archlinuxfr]" >> /etc/pacman.conf\
 echo "SigLevel = Optional TrustAll" >> /etc/pacman.conf
 echo "Server = http://repo.archlinux.fr/x86_64" >> /etc/pacman.conf
 ```
 
 Install yaourt
+
 ```
 pacman -Sy yaourt
 ```
-
 
 ## References
 

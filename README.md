@@ -282,8 +282,16 @@ Install yaourt
 pacman -Sy yaourt
 ```
 
+#### Download git scripts
+
+```bash
+git clone https://github.com/daviolet/archlinux.git
+```
+
+
+
 ## References
 
 * [Guía Linux Arch](https://wiki.archlinux.org/index.php/Installation_Guide)
 * https://github.com/dmazine/arch-linux-install
-
+* https://github.com/erikdubois/ArchOpenbox

@@ -271,7 +271,7 @@ Enable yaourt repository
 ```bash
 echo "" >> /etc/pacman.conf
 echo "## Enable Repository for yaourt" >> /etc/pacman.conf
-echo "[archlinuxfr]" >> /etc/pacman.conf\
+echo "[archlinuxfr]" >> /etc/pacman.conf
 echo "SigLevel = Optional TrustAll" >> /etc/pacman.conf
 echo "Server = http://repo.archlinux.fr/x86_64" >> /etc/pacman.conf
 ```

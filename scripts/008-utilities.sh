@@ -17,6 +17,8 @@ yaourt -S zsh  zsh-completions antigen-git --noconfirm
 yaourt -S xinput_calibrator touchegg-gce-git --noconfirm
 # Android
 yaourt -S gvfs-mtp  gvfs-gphoto2 libmtp android-file-transfer --noconfirm 
+# Disk Tools
+yaourt udftools gpart udftools gparted --noconfirm
 
 
 echo "################################################################"

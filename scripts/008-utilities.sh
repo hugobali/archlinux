@@ -18,8 +18,9 @@ yaourt -S xinput_calibrator touchegg-gce-git --noconfirm
 # Android
 yaourt -S gvfs-mtp  gvfs-gphoto2 libmtp android-file-transfer --noconfirm 
 # Disk Tools
-yaourt udftools gpart udftools gparted --noconfirm
-
+yaourt -S udftools gpart udftools gparted --noconfirm
+# Fonts
+yaourt -S xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-alias xorg-fonts-cyrillic xorg-fonts-encodings xorg-fonts-misc xorg-fonts-type1 --noconfirm
 
 echo "################################################################"
 echo "##########  Install Utilities and Apps installed   #############"
